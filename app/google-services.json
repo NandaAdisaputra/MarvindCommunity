@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "515176577010",
+    "firebase_url": "https://marvindcommunity.firebaseio.com",
+    "project_id": "marvindcommunity",
+    "storage_bucket": "marvindcommunity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515176577010:android:12ca6825009bc055db9d6b",
+        "android_client_info": {
+          "package_name": "com.nandaadisaputra.marvindcommunity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515176577010-gjaurdv9ii74964adbb94sv6qqai9ach.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nandaadisaputra.marvindcommunity",
+            "certificate_hash": "160952152c5b0d698de9ca21992c748a802b72b2"
+          }
+        },
+        {
+          "client_id": "515176577010-kbv1btevjkppqltjlcgf7ibqltreq30j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNSTAoNGpAqWrk78zJh_RWNuJYpVa--JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515176577010-kbv1btevjkppqltjlcgf7ibqltreq30j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

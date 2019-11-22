@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MarvindCommunity</string>
+    <string name="selamat_login_sukses_yey">selamat_login_sukses_yey</string>
+    <string name="sign_out">sign_out</string>
+</resources>
