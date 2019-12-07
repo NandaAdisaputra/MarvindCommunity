@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">MarvindCommunity</string>
-    <string name="selamat_login_sukses_yey">selamat_login_sukses_yey</string>
-    <string name="sign_out">sign_out</string>
+    <string name="image">image</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="register">Register</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="masukkan_password">Masukkan Password</string>
+    <string name="login">Login</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun ?</string>
+    <string name="belum_punya_akun">Belum Punya Akun ?</string>
 </resources>
