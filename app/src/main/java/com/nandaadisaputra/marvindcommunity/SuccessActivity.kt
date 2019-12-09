@@ -1,5 +1,6 @@
 package com.nandaadisaputra.marvindcommunity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -23,7 +24,7 @@ class SuccessActivity : AppCompatActivity(), View.OnClickListener {
         when (v) {
             sign_out_button -> {
 
-                //kita tambahkan alertdialog
+                //tambahkan alertdialog
                 alert("Apakah anda ingin logout ?") {
                     noButton {
                         toast("Anda tidak jadi Keluar")
@@ -37,8 +38,14 @@ class SuccessActivity : AppCompatActivity(), View.OnClickListener {
                                 false
                             )
                             startActivity(
-                                Intent(this@SuccessActivity, LoginActivity::class.java)
-                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                                Intent(
+                                    this@SuccessActivity,
+                                    LoginActivity::class.java
+                                )
+                                    .addFlags(
+                                        Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                                                Intent.FLAG_ACTIVITY_NEW_TASK
+                                    )
                             )
                             super.onBackPressed()
                         } else {
@@ -49,5 +56,10 @@ class SuccessActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+        companion object {
+            fun getLaunchIntent(from: Context) = Intent(from, SuccessActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            }
+        }
 
-}
+    }

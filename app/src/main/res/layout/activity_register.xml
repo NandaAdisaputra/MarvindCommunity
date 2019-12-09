@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><!--TODO SET LAYOUT LOGIN -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- set layout RegisterActivity -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,12 +9,12 @@
     tools:context=".LoginActivity">
 
     <RelativeLayout
-        android:layout_width="300dp"
+        android:layout_width="@dimen/_300sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/blueindigo"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="@dimen/_10sdp">
 
         <TextView
             android:id="@+id/register"
@@ -21,7 +23,7 @@
             android:gravity="center"
             android:textColor="@android:color/white"
             android:text="@string/register"
-            android:textSize="20sp"
+            android:textSize="@dimen/_20ssp"
             android:textStyle="bold" />
 
         <EditText

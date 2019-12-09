@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reset_password_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/title_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#FF0057"
+        android:gravity="center"
+        android:text="@string/forgot_your_password"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_reset_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/title_reset"
+        android:hint="@string/masukkan_email"
+        android:inputType="textEmailAddress"
+        tools:ignore="Autofill" />
+
+
+    <Button
+        android:id="@+id/btn_reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/edt_reset_email"
+        android:gravity="center"
+        android:text="@string/reset_password" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_below="@+id/btn_reset_password"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_back_reset"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/back"
+            android:onClick="onClick"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:textColor="#FC3C7D"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_exit_apps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="onClick"
+            android:text="@string/exit"
+            android:textAlignment="center"
+            android:textColor="#FC3C7D"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

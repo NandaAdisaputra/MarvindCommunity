@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--TODO SET LAYOUT LOGIN -->
+<!--set layout login -->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/orange"
     android:layout_height="match_parent"
+    android:background="@color/orange"
     tools:context=".LoginActivity">
 
     <RelativeLayout
         android:id="@+id/anim"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@android:color/white"
             android:text="@string/login"
-            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20ssp"
             android:textStyle="bold" />
 
         <EditText
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/edt_password"
             android:onClick="onClick"
-            android:text="@string/login"/>
+            android:text="@string/login" />
 
         <TextView
             android:id="@+id/account"
@@ -61,10 +61,31 @@
         <Button
             android:id="@+id/btn_register_login"
             android:layout_width="match_parent"
-            android:onClick="onClick"
             android:layout_height="wrap_content"
             android:layout_below="@id/account"
-            android:text="@string/register"/>
+            android:onClick="onClick"
+            android:text="@string/register" />
+        <TextView
+            android:id="@+id/account2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_register_login"
+            android:text="@string/lupa_password" />
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account2"
+            android:onClick="onClick"
+            android:text="@string/reset_password" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_button"
+            android:layout_below="@id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_8sdp"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -25,20 +25,25 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         //panggil kelas SharedPrefManager
         sharedPrefManager = SharedPrefManager(this)
-        //panggil kelas DatabaseHelper
         openHelper = DatabaseHelper(this)
+
         //cek sudah register atau belum
         if (sharedPrefManager?.sPSudahLogin!!) {
+            //intent ke SuccessActivity
             startActivity(
-                Intent(this@RegisterActivity, SuccessActivity::class.java)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    Intent(this@RegisterActivity, SuccessActivity::class.java)
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                                    Intent.FLAG_ACTIVITY_NEW_TASK)
             )
             super.onBackPressed()
         }
+        //handler ketika button login diklik
         btn_register.onClick {
             db = openHelper?.writableDatabase
             val email = edt_email_register.text.toString().trim()
             val password = edt_password_register.text.toString().trim()
+
+            //save to sharedpreferences
             sharedPrefManager?.saveSPString(SharedPrefManager.COL_2, email)
             sharedPrefManager?.saveSPString(SharedPrefManager.COL_3, password)
             if (email.isEmpty() || password.isEmpty()) {
@@ -61,6 +66,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    //Method ini digunakan untuk memvalidasi form register
     private fun validation(): Boolean {
         when {
             //Check email is empty or not
@@ -78,12 +84,14 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             else -> return true
         }
     }
-
+    //handler OnClick
     override fun onClick(v: View?) {
         when (v) {
             btn_login_register -> {
+                //intent ke LoginActivity
                 startActivity<LoginActivity>()
             }
+
         }
     }
 }
